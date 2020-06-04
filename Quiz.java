@@ -18,6 +18,8 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.Color;
+import java.awt.Font;
+
 /* ============================================================================================
   Step 1: Create the GUI Panel
  =========================================================================================== */
@@ -53,7 +55,13 @@ class gui extends JFrame implements ActionListener{
 					// sets the background color of this component
         			// the background color is used only if the component is opaque
 					label.setOpaque(true);
- 			        label.setBackground(Color.YELLOW);
+ 			        label.setBackground(Color.MAGENTA);
+ 			        // Sets the text color
+ 			        label.setForeground(new Color(0,0,0));
+ 			        // Sets Font  
+					label.setFont(new Font("Serif", Font.BOLD, 18));
+
+
 					label.setText("Que1: Which one among these is not a datatype");
 					add(label);
 
@@ -63,34 +71,36 @@ class gui extends JFrame implements ActionListener{
 					for(int i=0;i<4;i++)
 					{
 						option[i]=new JRadioButton();
-						// Set background color
-						option[i].setBackground(Color.YELLOW);
-							
+						// Set Background Color
+						option[i].setBackground(Color.MAGENTA);
+						// Sets text Color
+						option[i].setForeground(new Color(0,0,0));
+						// Sets Font  
+						option[i].setFont(new Font("Serif", Font.BOLD, 18));						
 						add(option[i]);
-			        		// bg.add(option[i]);
 			                }
 
 			               // Next Button 
-					b1=new JButton("Next");
+							b1=new JButton("Next");
 			                b1.addActionListener(this); // Actionlistner added
 			                b2=new JButton("Result");
 			                b2.setEnabled(false);
 			                b2.addActionListener(this); // Adding it to pane
 			                add(b2);
-					add(b1);
-					set();
+							add(b1);
+							set();
 
 						// To set the question bounds.
 							label.setBounds(30,40,450,20);
 
 
 						// To set the question bounds.
-							option[0].setBounds(50,80,100,20);
-							option[1].setBounds(50,110,100,20);
-							option[2].setBounds(50,140,100,20);
-							option[3].setBounds(50,170,100,20);
-							b1.setBounds(100,240,100,30);
-					        b2.setBounds(270,240,100,30);
+							option[0].setBounds(50,100,100,20);
+							option[1].setBounds(50,140,100,20);
+							option[2].setBounds(50,180,100,20);
+							option[3].setBounds(50,220,100,20);
+							b1.setBounds(100,270,100,30);
+					        b2.setBounds(270,270,100,30);
 					
 				}
 	/* ============================================================================================
