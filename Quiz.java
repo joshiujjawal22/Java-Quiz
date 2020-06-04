@@ -78,6 +78,8 @@ class gui extends JFrame implements ActionListener{
 						// Sets Font  
 						option[i].setFont(new Font("Serif", Font.BOLD, 18));						
 						add(option[i]);
+
+						bg.add(option[i]); // To select only one option
 			                }
 
 			               // Next Button 
