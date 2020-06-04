@@ -17,7 +17,7 @@ Pre-Requisites
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import java.awt.Color;
 /* ============================================================================================
   Step 1: Create the GUI Panel
  =========================================================================================== */
@@ -33,21 +33,39 @@ class gui extends JFrame implements ActionListener{
 
 			        gui()
 				{
-			                setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			                
+			         /*------------------------------------------------------
+			         						FRAME
+			         --------------------------------------------------------*/
+			         
+			         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			        
+			        getContentPane().setBackground(Color.MAGENTA); // Set background color of Frame
 					setLayout(null);
 					setLocation(500,100);
 					setVisible(true);
 					setSize(600,400);
-			                setTitle("Quiz Application using java");
+			        setTitle("Quiz Application using java");
+
+
+
 					label=new JLabel();
+					// sets the background color of this component
+        			// the background color is used only if the component is opaque
+					label.setOpaque(true);
+ 			        label.setBackground(Color.YELLOW);
 					label.setText("Que1: Which one among these is not a datatype");
 					add(label);
 
 					// Radio Button
 					bg=new ButtonGroup();
+
 					for(int i=0;i<4;i++)
 					{
-						option[i]=new JRadioButton();	
+						option[i]=new JRadioButton();
+						// Set background color
+						option[i].setBackground(Color.YELLOW);
+							
 						add(option[i]);
 			        		// bg.add(option[i]);
 			                }
